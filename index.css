@@ -1,3 +1,18 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+body > * {
+    scroll-snap-align: start;
+}
 .introduction {
     padding-top: 1rem;
+}
+
+.name-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('./fox.jpg');
+    background-size: cover;
+}
+.scroll-text {
+    padding-bottom: 1em;
+    font-size: 1.2em;
 }
