@@ -1,3 +1,7 @@
+.hero.is-fullheight {
+    /* Mobile Chrome fix */
+    min-height: -webkit-fill-available
+}
 html {
     scroll-snap-type: y mandatory;
 }
