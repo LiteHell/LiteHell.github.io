@@ -20,3 +20,9 @@ body > * {
     padding-bottom: 1em;
     font-size: 1.2em;
 }
+h3 {
+    text-decoration: underline;
+}
+.contact-link:not(:last-of-type)::after {
+    content: " | ";
+}
