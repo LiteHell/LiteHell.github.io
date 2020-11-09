@@ -2,16 +2,16 @@
     /* Mobile Chrome fix */
     /* min-height: -webkit-fill-available */
 }
+/*
 html {
     scroll-snap-type: y proximity;
 }
 body > * {
     scroll-snap-align: start;
-}
+}*/
 .introduction {
     padding-top: 1rem;
 }
-
 .name-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('./fox.jpg');
     background-size: cover;
