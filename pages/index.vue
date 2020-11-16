@@ -4,7 +4,7 @@
             <welcome-section-link :icon="['fab', 'github']" href="https://github.com/litehell" title="Github" />
             <welcome-section-link :icon="['fab', 'linkedin']" href="https://linkedin.com/in/litehell" title="LinkedIn" />
             <welcome-section-link :icon="['fab', 'keybase']" href="https://kybase.io/litehell" title="Keybase" />
-            <welcome-section-link icon="envelope" href="https://github.com/litehell" title="Envelope" />
+            <welcome-section-link icon="envelope" href="mailto:litehell@litehell.info" title="E-mail" />
         </welcome-section>
         <content-section :page="page" />
         <footer class="footer">
