@@ -1,0 +1,23 @@
+{
+  "name": "litehell.github.io",
+  "version": "1.0.0",
+  "description": "LiteHell's personal website",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "repository": "https://github.com/LiteHell/LiteHell.github.io",
+  "author": "LiteHell <litehell@litehell.info>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@nuxt/content": "^1.10.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "bulma": "^0.9.1",
+    "nuxt": "^2.14.7"
+  }
+}
