@@ -15,7 +15,8 @@ Hello, I'm a rookie developer with some experiences in node.js and C# and intere
 
 ### Honours and Awards
  - <small>2019</small> [Newbie Programming Contest](https://www.acmicpc.net/contest/view/401) by [ChAOS](https://cauchaos.github.io) : Co-winner, 2nd place (Team name : 아리)
- - <small>2019</small> [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/458) by [ChAOS](https://cauchaos.github.io) : Co-winner, 5th place (Team name : 흑석흑흑석)
+ - <small>2019</small> [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/458) by [ChAOS](https://cauchaos.github.io) : Co-winner of special award, 5th place (Team name : 흑석흑흑석)
+ - <small>2020</small> [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/549) by [ChAOS](https://cauchaos.github.io) : Co-winner of special award, 5th place (Team name : BBBB)
 
 ### Activites
  - <small>2019 ~ now</small> [ManhwaDurae](https://caumd.club)
