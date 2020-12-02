@@ -14,13 +14,17 @@ Hello, I'm a rookie developer with some experiences in node.js and C# and intere
  - English : Intermediate level
 
 ### Honours and Awards
- - <small>2019</small> [Newbie Programming Contest](https://www.acmicpc.net/contest/view/401) by [ChAOS](https://cauchaos.github.io) : Co-winner, 2nd place (Team name : 아리)
- - <small>2019</small> [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/458) by [ChAOS](https://cauchaos.github.io) : Co-winner of special award, 5th place (Team name : 흑석흑흑석)
- - <small>2020</small> [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/549) by [ChAOS](https://cauchaos.github.io) : Co-winner of special award, 5th place (Team name : BBBB)
+ - <small>2019</small> Co-winner of 2nd place, [Newbie Programming Contest](https://www.acmicpc.net/contest/view/401) by [ChAOS](https://cauchaos.github.io)
+ - <small>2019</small> Co-winner of special award, 5th place, [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/458) by [ChAOS](https://cauchaos.github.io)
+ - <small>2020</small> Winner of special award, 5th place, [Chung-ang university Programming Contest](https://www.acmicpc.net/contest/view/549) by [ChAOS](https://cauchaos.github.io)
+ - <small>2020</small> Co-winner of special award by [Gabia](https://www.gabia.com), OSS Open source contribution by [National IT Industry Promotion Agency](https://www.nipa.kr)
 
 ### Activites
  - <small>2019 ~ now</small> [ManhwaDurae](https://caumd.club)
     <p>ManhwaDurae is a cartoon club of Chung-Ang University Seoul Campus.<br>I joined in the club in 2019 and created some cartoons and digital illustrations. In 2020, I was appointed vice president, and worked as vice president during the year.</p>
+ - <small>2019 ~ 2020</small> OSS Open source contribution
+    <p>Open source contribution is an activity held by National IT Industry Promotion Agency(a.k.a. NIPA). It consists of several projects with experienced mentors, and mentors help mentees make open source contributions via github.<br>
+    I participated in two projects, TimeCat in 2019, and HackaTalk in 2020. In 2019, while participating in TimeCat project, I had an experience of collaboration. In 2020, while participating in HackaTalk, I had an experience of using GraphQL.</p>
 
 ### Projects and Contributions
  - <small>2015 ~ 2019</small> [NamuFix](https://github.com/litehell/NamuFix) <span class="tag">Javascript</span> : An userscript to improve user experience of namuwiki
