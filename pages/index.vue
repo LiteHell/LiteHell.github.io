@@ -1,5 +1,5 @@
 <template>
-    <fullscreen-scroll-snap>
+    <div>
         <welcome-section>
             <welcome-section-link :icon="['fab', 'github']" href="https://github.com/litehell" title="Github" />
             <welcome-section-link :icon="['fab', 'linkedin']" href="https://linkedin.com/in/litehell" title="LinkedIn" />
@@ -16,7 +16,7 @@
                 </p>
             </div>
         </footer>
-    </fullscreen-scroll-snap>
+    </div>
 </template>
 
 <script>
