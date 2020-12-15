@@ -31,9 +31,28 @@
     padding-bottom: 1em;
     font-size: 1.2em;
 }
+.scroll-text > * {
+    position: relative;
+    animation: bounce 1s infinite linear;
+}
 .contact-link:not(:last-of-type)::after {
     content: " | ";
 }
+@keyframes bounce {
+    0%, 55% {
+        top: 0em;
+    }
+    60% {
+        top: 0.1em
+    }
+    70% {
+        top: 0.3em;
+    }
+    100% {
+        top: 0em;
+    }
+}
+
 </style>
 
 <script>

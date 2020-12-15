@@ -1,12 +1,14 @@
 <template>
-    <div>
+    <fullscreen-scroll-snap>
         <welcome-section>
             <welcome-section-link :icon="['fab', 'github']" href="https://github.com/litehell" title="Github" />
             <welcome-section-link :icon="['fab', 'linkedin']" href="https://linkedin.com/in/litehell" title="LinkedIn" />
             <welcome-section-link :icon="['fab', 'keybase']" href="https://keybase.io/litehell" title="Keybase" />
             <welcome-section-link icon="envelope" href="mailto:litehell@litehell.info" title="E-mail" />
         </welcome-section>
-        <content-section :page="page" />
+        <div class="content-section-wrapper">
+            <content-section :page="page" class="website-content" />
+        </div>
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
@@ -16,16 +18,32 @@
                 </p>
             </div>
         </footer>
-    </div>
+    </fullscreen-scroll-snap>
 </template>
+
+<style scoped>
+.content-section-wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    scroll-snap-type: unset;
+    width: 100vw;
+    height: 100vh;
+}
+.content-section-wrapper::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+</style>
 
 <script>
 import WelcomeSection from '../components/welcomeSection'
 import WelcomeSectionLink from '../components/welcomeSectionLink'
 import ContentSection from '../components/contentSection'
+import FullscreenScrollSnap from '../components/fullscreenSnap'
 
 export default {
-    components: { WelcomeSection, WelcomeSectionLink, ContentSection },
+    components: { WelcomeSection, WelcomeSectionLink, ContentSection, FullscreenScrollSnap },
     head() {
         return {
             title: 'Yeonjin Shin',
