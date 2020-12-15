@@ -7,7 +7,7 @@
 
 <style scoped>
 .fullscreen-snap-container {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     height: 100vh;
     width: 100vw;
     overflow-y: scroll;
