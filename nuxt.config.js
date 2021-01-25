@@ -11,7 +11,7 @@ module.exports = {
     ],
     fontawesome: {
         icons: {
-            solid: ['faEnvelope', 'faChevronDown'],
+            solid: ['faEnvelope', 'faChevronDown', 'faBlog'],
             brands: ['faGithub', 'faKeybase', 'faLinkedin']
         }
     },
