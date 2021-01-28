@@ -1,6 +1,8 @@
 <template>
     <section class="section introduction">
-        <nuxt-content class="content is-medium" :document="page" />
+        <div class="container">
+            <nuxt-content class="content is-medium" :document="page" />
+        </div>
     </section>
 </template>
 
