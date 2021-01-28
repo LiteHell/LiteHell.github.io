@@ -25,7 +25,7 @@
     <p>오픈소스 컨트리뷰톤은 정보통신산업진흥원(a.k.a. NIPA)에서 매년 주관하는 행사로, 멘토와 멘티가 팀을 이루어 오픈소스 프로젝트에 기여하는 활동입니다.<br>
     2019년에는 TimeCat 프로젝트에, 그 다음 해에는 HackaTalk 프로젝트에 참가했습니다. TimeCat 프로젝트에 참가하면서 여러명과 GitHub를 통해 함께하는 협업 경험을 가질 수 있었고, 그 다음 해 TimeCat 프로젝트에 참가하면서 GraphQL에 대한 경험을 얻을 수 있었습니다.</p>
 
-### Projects and Contributions
+### 프로젝트 및 기여
  - <small>2015 ~ 2019</small> [NamuFix](https://github.com/litehell/NamuFix) <span class="tag">Javascript</span> : 나무위키를 편하게 이용할 수 있게 하는 유저스크립트입니다.
  - <small>2019</small> [중앙대학교 학사일정 ICS](https://caucalendar.online/) ([GitHub](https://github.com/LiteHell/caucalendar)) <span class="tag">Javascript</span> <span class="tag">Node.js</span> : 중앙대학교의 학사일정을 iCalendar 포멧으로 제공하여, 캘린더 앱에서 구독할 수 있게 하는 웹사이트입니다.
  - <small>2019</small> [개인 RSS](https://rss.litehell.info/) ([GitHub](https://github.com/LiteHell/personal_rss)) <span class="tag">Javascript</span> <span class="tag">Node.js</span> : 개인적으로 사용하기 위해 만든 프로젝트입니다. 네이버, 다음 웹툰과 중앙대학교의 몇몇 사이트 공지사항을 RSS로 제공합니다.
