@@ -1,6 +1,6 @@
 <template>
     <div>
-        <welcome-section>
+        <welcome-section v-on:lang-switched="changeLang" :lang="this.lang">
             <welcome-section-link :icon="['fab', 'github']" href="https://github.com/litehell" title="Github" />
             <welcome-section-link :icon="['fab', 'linkedin']" href="https://linkedin.com/in/litehell" title="LinkedIn" />
             <welcome-section-link :icon="['fab', 'keybase']" href="https://keybase.io/litehell" title="Keybase" />
@@ -26,6 +26,7 @@ import WelcomeSectionLink from '../components/welcomeSectionLink'
 import ContentSection from '../components/contentSection'
 import FullscreenScrollSnap from '../components/fullscreenSnap'
 
+const supportedLangs = ['en', 'ko'];
 export default {
     components: { WelcomeSection, WelcomeSectionLink, ContentSection, FullscreenScrollSnap },
     head() {
@@ -44,11 +45,27 @@ export default {
         }
     },
     async asyncData({ $content }) {
-        const page = await $content('index').fetch();
-
+        const pages = {};
+        for (const lang of supportedLangs)
+            pages[lang] = await $content('index.' + lang).fetch();
         return {
-            page
-        };
+            pages
+        }
+    },
+    data() {
+        return {
+            lang: 'en'
+        }
+    },
+    computed: {
+        page() {
+            return this.pages[this.lang];
+        }
+    },
+    methods: {
+        changeLang(lang) {
+            this.lang = lang;
+        }
     }
 }
 </script>
