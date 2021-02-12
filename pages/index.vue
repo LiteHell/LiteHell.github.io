@@ -31,7 +31,7 @@ export default {
     components: { WelcomeSection, WelcomeSectionLink, ContentSection, FullscreenScrollSnap },
     head() {
         return {
-            title: 'Yeonjin Shin',
+            title: this.lang === 'en' ? 'Yeonjin Shin' : '신연진',
             meta: [
                 {name: 'viewport', content : 'width=device-width, user-scalable=no'},
                 {property: 'og:title', content: 'Yeonjin Shin'},
