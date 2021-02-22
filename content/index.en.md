@@ -4,7 +4,7 @@
 Hello, I'm a rookie developer with some experiences in node.js and C# and interests in web development. I'm currently in the undergraduate program of Computer Science and Engineering at [Chung-Ang University](https://www.cau.ac.kr). You can contact me via [email](mailto:litehell@litehell.info).
 
 ### Curriculum vitae
- - <small>2019 ~ now</small> <div style="display: inline-block; vertical-align: top;">B.S. in Computer Science and Engineering ([ABEEK](http://www.abeek.or.kr/)-Accredited), in Progress<br>[Chung-Ang University](https://www.cau.ac.kr), Seoul, Republic of Korea</div>
+ - <small>2019 ~ now</small> <div style="display: inline-block; vertical-align: top;">B.S. in Computer Science and Engineering ([ABEEK](http://www.abeek.or.kr/)-Accredited), In Progress<br>[Chung-Ang University](https://www.cau.ac.kr), Seoul, Republic of Korea</div>
    - Major scholarships : Department Secondary Honor Scholarships since 2020 spring semester
  - <small>2021 ~ 2022</small> Serving military service (conscripted) at [Republic of Korea Air Force](http://www.airforce.mil.kr/) since March 2021.
 
