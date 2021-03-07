@@ -53,9 +53,14 @@ export default {
         }
     },
     data() {
-        return {
-            lang: 'en'
-        }
+        if (process.browser && window)
+            return {
+                lang: /^ko-?/.test(window.navigator.language) ? 'ko' : 'en'
+            }
+        else
+            return {
+                lang: 'en'
+            }
     },
     computed: {
         page() {
