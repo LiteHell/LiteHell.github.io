@@ -12,7 +12,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           yarn install
-          yarm generate
+          yarn generate
           
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
