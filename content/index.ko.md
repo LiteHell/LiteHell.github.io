@@ -5,7 +5,7 @@
 
 ### 약력
  - <small>2019 ~ now</small> [중앙대학교 소프트웨어학부](https://cse.cau.ac.kr) 학사과정 재학중
- - <small>2021 ~ 2022</small> 군복무(공군), 2021년 3월부터 복무중.
+ - <small>2021 ~ 2022</small> 군복무(공군), 병장 만기전역.
     
 ### 프로그래밍 언어
  - JavaScript, C#, TypeScript : 중급
