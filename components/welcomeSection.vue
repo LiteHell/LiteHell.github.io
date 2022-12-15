@@ -62,6 +62,9 @@ h2.subtitle {
     position: relative;
     animation: bounce 1s infinite linear;
 }
+.scroll-text svg {
+    height: 1em;
+}
 .contact-link:not(:last-of-type)::after {
     content: " | ";
 }
