@@ -6,6 +6,12 @@
     </a>
 </template>
 
+<style scoped>
+.icon svg {
+    height: 1em;
+}
+</style>
+
 <script>
 export default {
     props: ['href', 'title', 'icon']
