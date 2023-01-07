@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg.icon {
+    display: inline;
+    height: 1em !important;
+    width: auto !important;
+}
+
+#card-title {
+    background-attachment: fixed;
+    background-position-y: 95%;
+}

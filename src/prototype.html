@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="output.css" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
+    <title>Yeonjin Shin</title>
+</head>
+
+<body>
+    <header class="h-screen w-screen flex flex-col md:flex-row-reverse shadow-md">
+        <div class="bg-amber-600 bg-no-repeat bg-cover w-full md:w-3/5 h-full card-background p-12 text-right flex flex-col justify-end bg-fixed">
+            <a class="align-bottom text-white text-opacity-60 hover:text-opacity-80" href="#" id="showGpl">Click here for copyright information</a>
+        </div>
+        <div class="p-12 pt-6 md:pt-12 align-bottom text-left md:w-full h-full flex-1 flex flex-col justify-between bg-gray-50 bg-bottom" id="card-title">
+            <div class="text-left text-xl mb-12">
+                <i data-feather="code"></i>
+            </div>
+            <div class="text-left w-full font-sans ">
+                <h1 class="text-4xl font-normal">신연진</h1>
+                <p class="text-xl font-light">초보 개발자</p>
+                <div class="border-gray-700 border-x-0 border-y h-0 w-64 my-5"></div>
+                <p><i data-feather="mail"></i> E-mail: <a class="hover:text-gray-700"
+                        href="yeonjin@yeonjin.name">yeonjin@yeonjin.name</a><br />
+                    <i data-feather="key"></i> GPG Key:
+                    <code>D6D8 0A51 DDFA 07A4</code>
+                <ul class="mt-1.5">
+                    <li class="inline"><a class="hover:text-gray-700" href="https://github.com/litehell"><i
+                                data-feather="github"></i>GitHub</a></li>
+                    <li class="inline"><a class="hover:text-gray-700" href="https://linkedin.com/in/litehell"><i
+                                data-feather="linkedin"></i>LinkedIn</a></li>
+                    <li class="inline"><a class="hover:text-gray-700" href="https://blog.litehell.info"><i
+                                data-feather="link"></i>Blog</a></li>
+                </ul>
+                <div class="text-sm mt-3 text-gray-700">Scroll down to see more...</div>
+                </p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="container mx-auto p-10 mt-10">
+            <h1 class="text-3xl mb-3 pb-2 pt-6 underline underline-offset-8">소개</h1>
+            <p class="my-2">안녕하세요, 4년제 대학교에서 컴퓨터공학을 공부하고, 웹 개발에 관심이 많은 초보 개발자입니다.</p>
+            <p class="my-2">수려하지 않지만, 여러가지 웹 어플리케이션들을 만들었습니다. 2020년에는 중앙동아리 홈페이지를 React, TypeScript, Node.js, MariaDB를 이용해 개발했습니다.</p>
+            <h1 class="text-3xl mb-3 pb-2 pt-6 underline underline-offset-8">학력 몇 병역</h1>
+            <p class="my-2">
+                <ul class="list-disc list-inside">
+                    <li><p class="inline-table">
+                        <span class="text-lg font-semibold inline">중앙대학교</span>&nbsp;<span class="text-sm">2019 ~ 현재</span>
+                        <br />
+                        <span>컴퓨터공학사, 학점: 4.29/4.5</span>
+                    </p></li>
+                    <li><p class="inline-table pt-3">
+                        <span class="text-lg font-semibold inline">대한민국 공군</span>&nbsp;<span class="text-sm">2021 ~ 2022</span>
+                        <br />
+                        <span>병장 만기전역</span>
+                    </p></li>
+                </ul>
+            </p>
+            <h1 class="text-3xl mb-3 pb-2 pt-6 underline underline-offset-8">프로젝트</h1>
+            <p class="my-2">
+                주로 TypeScript(혹은 JavaScript)와 Node.js, React를 이용해 개인 프로젝트를 진행했습니다
+            </p>
+        </article>
+    </main>
+    <footer class="bg-gray-300">
+        <div class="container mx-auto p-10 text-center">
+            <p>
+                Copyright (C) 2023 Yeonjin Shin, All rights reserved<br>
+                This website is licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License Version 3</a>, or (at your option) any later version.<br />
+                <br />
+                This website uses <a href="https://qrohlf.com/trianglify/">Traianglify library</a>, by <a href="https://qrohlf.com/">qrohlf</a>, licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License Version 3</a>
+            </p>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+
+        // Trianglify
+        const cardBackground = document.querySelector('.card-background');
+        const pattern = trianglify({
+            width: cardBackground.getBoundingClientRect().width,
+            height: cardBackground.getBoundingClientRect().height
+        });
+        const svg = pattern.toSVGTree().toString();
+        const blob = new Blob([svg], {type: 'image/svg+xml'});
+        const blobUrl = URL.createObjectURL(blob);
+        
+        cardBackground.style.backgroundImage = `url(${blobUrl})`;
+
+        // Copyright info
+        document.querySelector('#showGpl').addEventListener('click', evt => {
+            evt.preventDefault();
+            alert('This website uses Trainglify.js library by qrohlf(https://qrohlf.com), licensed under GPL v3.\nTherefore this website is also licensed under GPL v3.')
+        })
+    </script>
+</body>
+
+</html>
