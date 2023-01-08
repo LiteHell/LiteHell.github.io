@@ -13,6 +13,7 @@ jobs:
         run: |
           yarn install
           yarn build
+          yarn build-static "litehell@litehell.info"
           
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
@@ -27,6 +28,10 @@ jobs:
           SSH: true
           FOLDER: dist
           CLEAN: true
+
+      - name: Build static markups for yeonjin.name
+        run: |
+          yarn build-static "yeonjin@yeonjin.name"
 
       - name: Deploy to yeonjin.name
         uses: bxb100/action-upload-webdav@v1

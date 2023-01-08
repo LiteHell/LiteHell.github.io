@@ -5,9 +5,9 @@ interface UnorderedListOptions {
 }
 
 export default function UnorderedList({ children }: UnorderedListOptions) {
-    return <p className="mt-2 mb-4 pl-3">
+    return <div className="mt-2 mb-4 pl-3">
         <ul className="list-disc list-outside ml-2">
             {children}
         </ul>
-    </p>;
+    </div>;
 }

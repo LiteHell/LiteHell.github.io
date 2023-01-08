@@ -5,9 +5,9 @@ import '../styles/index.css';
 import Content from './article';
 import Footer from "./footer";
 import Header from "./header";
+import isBrowser from './isBrowser';
 
-function Index() {
-    const email = location.hostname === 'yeonjin.name' ? 'yeonjin@yeonjin.name' : 'litehell@litehell.info'
+export default function Index({ email }: { email: string }) {
     return <div>
         <Header
             title="Yeonjin Shin"
@@ -40,7 +40,13 @@ function Index() {
     </div>
 }
 
-const rootDiv = document.createElement('div');
-document.body.appendChild(rootDiv);
-const root = ReactDOM.createRoot(rootDiv);
-root.render(<Index />)
+if (isBrowser()) {
+    const email = location.hostname === 'yeonjin.name' ? 'yeonjin@yeonjin.name' : 'litehell@litehell.info'
+    const rootDiv = document.querySelector('body > #root')!;
+    if (rootDiv.classList.contains('hydrated')) {
+        ReactDOM.hydrateRoot(rootDiv, <Index email={email} />);
+    } else {
+        const root = ReactDOM.createRoot(rootDiv);
+        root.render(<Index email={email} />)
+    }
+}
