@@ -42,7 +42,9 @@ export default function Content(opts: HeaderContentOptions): ReactElement {
             <p><i data-feather="mail"></i> E-mail: <a className="hover:text-gray-700"
                 href={`mailto:${opts.email}`}>{opts.email}</a><br />
                 <i data-feather="key"></i> GPG Key:&nbsp;
-                <code>{formatGpgKey(opts.gpgKey)}</code>
+                <a href="/pubkey.asc" className="hover:text-gray-700">
+                    <code>{formatGpgKey(opts.gpgKey)}</code>
+                </a>
             </p>
             <ul className="mt-1.5">
                 {opts.links.map(i => <li className="inline mr-2 last:mr-0" key={i.key}>
