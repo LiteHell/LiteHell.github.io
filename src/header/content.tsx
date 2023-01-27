@@ -45,7 +45,7 @@ export default function Content(opts: HeaderContentOptions): ReactElement {
             <p><i data-feather="mail"></i> E-mail: <a className="hover:text-gray-700"
                 href={`mailto:${opts.email}`}>{opts.email}</a><br />
                 <i data-feather="key"></i> GPG Key:&nbsp;
-                <a onClick={() => toggleGPGDialog()} className="hover:text-gray-700">
+                <a onClick={() => toggleGPGDialog()} className="hover:text-gray-700 cursor-pointer">
                     <code>{formatGpgKey(opts.gpgKey)}</code>
                 </a>
             </p>
