@@ -13,7 +13,7 @@ export default function Index({ email }: { email: string }) {
             title="Yeonjin Shin"
             subtitle="Rookie software engineer"
             email={email}
-            gpgKey="D6D80A51DDFA07A4"
+            gpgKey="C541E605C4618F4C"
             links={[
                 {
                     href: 'https://github.com/litehell',
