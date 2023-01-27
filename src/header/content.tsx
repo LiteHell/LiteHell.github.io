@@ -1,5 +1,6 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useState } from 'react';
 import { Code } from 'react-feather';
+import GPGDialog from './gpgDialog';
 
 interface HeaderContentLink {
     href: string;
@@ -31,6 +32,8 @@ function formatGpgKey(gpgKey: string): string {
 }
 
 export default function Content(opts: HeaderContentOptions): ReactElement {
+    const [isGPGDialogActive, setIsGPGDialogActive] = useState<boolean>(false);
+    const toggleGPGDialog = (newValue?: boolean) => { setIsGPGDialogActive(newValue ?? !isGPGDialogActive); };
     return <div className="p-12 pt-6 md:pt-12 align-bottom text-left md:w-full h-full flex-1 flex flex-col justify-between bg-gray-50 bg-bottom" id="card-title">
         <div className="text-left text-xl mb-12">
             <Code className="icon"></Code>
@@ -42,7 +45,7 @@ export default function Content(opts: HeaderContentOptions): ReactElement {
             <p><i data-feather="mail"></i> E-mail: <a className="hover:text-gray-700"
                 href={`mailto:${opts.email}`}>{opts.email}</a><br />
                 <i data-feather="key"></i> GPG Key:&nbsp;
-                <a href="/pubkey.asc" className="hover:text-gray-700">
+                <a onClick={() => toggleGPGDialog()} className="hover:text-gray-700">
                     <code>{formatGpgKey(opts.gpgKey)}</code>
                 </a>
             </p>
@@ -55,5 +58,6 @@ export default function Content(opts: HeaderContentOptions): ReactElement {
             </ul>
             <div className="text-sm mt-3 text-gray-700">Scroll down to see more...</div>
         </div>
+        <GPGDialog active={isGPGDialogActive} onCloseButtonClick={() => toggleGPGDialog(false)}></GPGDialog>
     </div>
 }
