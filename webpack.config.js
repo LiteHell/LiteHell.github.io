@@ -70,6 +70,9 @@ module.exports = [{
         static: {directory: path.join(__dirname, 'dist')},
         open: true,
         port: 'auto',
+        client: {
+            progress: true
+        }
     },
     watchOptions: {
         ignored: /node_modules/
