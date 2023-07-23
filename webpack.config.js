@@ -1,7 +1,7 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPLugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const dev = process.env.NODE_ENV === 'development';
@@ -57,13 +57,13 @@ module.exports = [{
             ...commons.module.rules,
             {
                 test: /\.css$/,
-                use: [dev ? 'style-loader' : MiniCssExtractPLugin.loader, 'css-loader', 'postcss-loader']
+                use: [dev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
             },
         ]
     },
     plugins: [
         ...commons.plugins,
-        new MiniCssExtractPLugin(),
+        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
         title: 'Yeonjin Shin',
         filename: 'index.html',
