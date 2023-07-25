@@ -70,7 +70,7 @@ export default function Content() {
                             techs={["Python"]}
                         >
                             <p>
-                                <StyledAnchor href="https://github.com/openNAMU/openNAMU">openNAMU</StyledAnchor>를 이용해 운영되던 동아리 위키를 인수인계받아 회원관리 사이트와 로그인을 연동시키고 동아리 실정에 맞게 약간의 수정을 거쳐 운영했습니다.
+                                <StyledAnchor href="https://github.com/openNAMU/openNAMU">openNAMU</StyledAnchor>를 이용해 운영되던 동아리 위키를 인수인계받아 회원관리 사이트와 로그인을 연동시키고 동아리 실정에 맞게 약간의 수정을 거쳐 운영했습니다. 다만 지금은 운영되지 않습니다.
                             </p>
                         </ProjectListItemContent>
                     </ListItem>
