@@ -112,12 +112,24 @@ export default function Content() {
                         <ProjectListItemContent
                             name="caucalendar"
                             href="https://caucalendar.online"
-                            techs={["Javascript"]}
+                            techs={["Go"]}
                         >
                             <p>
                                 중앙대학교 학사일정을 주기적으로 크롤링해 <StyledAnchor href="https://en.wikipedia.org/wiki/ICalendar">ics 파일 형식</StyledAnchor>으로 제공하는 프로젝트입니다.<br />
                                 해당 서비스를 이용하면 학사일정을 모바일 캘린더앱이나 구글 캘린더 등에서 편하게 보실 수 있습니다.<br />
                                 소스코드는 <StyledAnchor href="https://github.com/litehell/caucalendar">여기</StyledAnchor>서 보실 수 있습니다.
+                            </p>
+                        </ProjectListItemContent>
+                    </ListItem>
+                    <ListItem>
+                        <ProjectListItemContent
+                            name="cau-rss"
+                            href="https://rss.litehell.info"
+                            techs={["Go"]}
+                        >
+                            <p>
+                                중앙대학교의 주요 공지사항들을 주기적으로 크롤링해 RSS, Atom, JSON Feed 등의 피드로 제공하는 프로젝트입니다. <br />
+                                RSS 리더나 RSS 메신지 봇을 이용하시면 공지사항을 편하게 볼 수 있습니다. 소스코드는 <StyledAnchor href='https://github.com/litehell/cau-rss'>여기</StyledAnchor>서 보실 수 있습니다.
                             </p>
                         </ProjectListItemContent>
                     </ListItem>
