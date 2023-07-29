@@ -12,3 +12,13 @@ svg.icon {
     background-attachment: fixed;
     background-position-y: 95%;
 }
+
+.h-dynamic-screen {
+    height: 100vh; /* fallback */
+    height: 100dvh;
+}
+
+.w-dynamic-screen {
+    width: 100vw; /* fallback */
+    width: 100dvw;
+}
