@@ -133,6 +133,18 @@ export default function Content() {
                             </p>
                         </ProjectListItemContent>
                     </ListItem>
+                    <ListItem>
+                        <ProjectListItemContent
+                            name="cau-pre-timetable"
+                            href="https://pre-timetable.puang.network"
+                            techs={["React", "Typescript"]}
+                        >
+                            <p>
+                                중앙대학교의 다음 학기 강의시간표를 강의시간표 정식공개일 이전에 부정확하게나마 미리 볼 수 있게 하는 프로젝트입니다. <br />
+                                소스코드는 <StyledAnchor href='https://github.com/litehell/cau-pre-timetable'>여기</StyledAnchor>서 보실 수 있습니다.
+                            </p>
+                        </ProjectListItemContent>
+                    </ListItem>
                 </UnorderedList>,
                 <p>
                     이외에도 몇가지 프로젝트가 더 있지만 이 사이트에는 서술하지 않았습니다.
