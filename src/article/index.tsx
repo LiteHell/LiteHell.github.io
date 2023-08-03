@@ -111,7 +111,7 @@ export default function Content() {
                     <ListItem>
                         <ProjectListItemContent
                             name="caucalendar"
-                            href="https://caucalendar.online"
+                            href="https://calendar.puang.network"
                             techs={["Go"]}
                         >
                             <p>
@@ -124,7 +124,7 @@ export default function Content() {
                     <ListItem>
                         <ProjectListItemContent
                             name="cau-rss"
-                            href="https://rss.litehell.info"
+                            href="https://rss.puang.network"
                             techs={["Go"]}
                         >
                             <p>
