@@ -45,10 +45,13 @@ jobs:
           cp -r portfolio dist
 
       - name: Deploy to yeonjin.name
-        uses: bxb100/action-upload-webdav@v1
+        uses: bxb100/action-upload@main
         with:
-          webdav_address: ${{ secrets.WEBDAV_ADDRESS }}
-          webdav_username: ${{ secrets.WEBDAV_USERNAME }}
-          webdav_password: ${{ secrets.WEBDAV_PASSWORD }}
-          webdav_upload_path: "/website"
-          files: "./dist/**"
+          provider: webdav
+          flatten: false
+          provider_options: |
+            endpoint=${{ secrets.WEBDAV_ADDRESS }}
+            username=${{ secrets.WEBDAV_USERNAME }}
+            password=${{ secrets.WEBDAV_PASSWORD }}
+            root=/website
+          include: "./dist/**"
