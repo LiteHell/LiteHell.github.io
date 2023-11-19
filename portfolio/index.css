@@ -25,6 +25,17 @@ html body {
   font-family: "Noto Sans KR", sans-serif;
   padding: 2.5rem 3.5rem;
 }
+@media screen and (max-width: 1000px) {
+  html body {
+    padding: 2.5rem 1.5rem;
+  }
+}
+@media screen and (min-width: 1001px) {
+  html body {
+    width: 900px;
+    margin: 0 auto;
+  }
+}
 html body h1, html body h2, html body h3, html body h4, html body h5, html body h6 {
   padding: 0px;
   margin: 0px;
@@ -195,6 +206,11 @@ html body article ul.projects .project > .project-description .project-links li 
   html body article ul.projects .project > .project-imgs {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 640px) {
+  html body article ul.projects .project > .project-imgs .project-img {
+    width: 7rem;
   }
 }
 @media print {

@@ -25,6 +25,13 @@ html {
     body {
         font-family: 'Noto Sans KR', sans-serif;
         padding: 2.5rem 3.5rem;
+        @media screen and (max-width: 1000px) {
+            padding: 2.5rem 1.5rem;
+        }
+        @media screen and (min-width: 1001px) {
+            width: 900px;
+            margin: 0 auto;
+        }
         h1, h2, h3, h4, h5, h6 {
             padding: 0px;
             margin: 0px;
@@ -115,6 +122,11 @@ html {
                         & > .project-imgs {
                             flex-direction: row;
                             flex-wrap: wrap;
+                            @media screen and (max-width: 640px) {
+                                .project-img {
+                                    width: 7rem;
+                                }
+                            }
                         }
                     }
                     @media print {
