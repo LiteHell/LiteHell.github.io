@@ -15,7 +15,9 @@ html .print-only {
   }
   html .page-break {
     break-before: page;
-    margin-bottom: 20mm;
+  }
+  html .page-break + section > h3 {
+    padding-top: 10mm;
   }
 }
 html * {

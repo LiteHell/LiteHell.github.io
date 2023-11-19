@@ -14,7 +14,9 @@ html {
         }
         .page-break {
             break-before: page;
-            margin-bottom: 20mm;
+            & + section > h3 {
+                padding-top: 10mm;
+            }
         }
     }
 
