@@ -32,6 +32,12 @@ export default function Index({ email }: { email: string }) {
                     text: 'Blog',
                     key: 'Blog',
                     icon: <Link className="icon"></Link>
+                },
+                {
+                    href: '/portfolio',
+                    text: 'Portfolio',
+                    key: 'Portfolio',
+                    icon: <Link className="icon"></Link>
                 }
             ]}
         ></Header>
