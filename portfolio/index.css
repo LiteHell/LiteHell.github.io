@@ -180,6 +180,7 @@ html body article ul.projects .project > .project-description h4 {
 }
 html body article ul.projects .project > .project-description p {
   font-size: 12pt;
+  margin: 0.25rem 0rem !important;
 }
 html body article ul.projects .project > .project-description .project-links {
   list-style-type: none;
