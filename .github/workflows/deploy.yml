@@ -13,11 +13,17 @@ jobs:
         with:
           node-version: 18
 
+      - name: Build css for portfolio and copy
+        run: |
+          npm i -g sass
+          sass portfolio/index.scss > portfolio/index.css
+
       - name: Install and Build 🔧
         run: |
           yarn install
           yarn build
           yarn build-static "litehell@litehell.info"
+          cp -r portfolio dist/portfolio
           
       - name: Install SSH Client 🔑
         uses: webfactory/ssh-agent@v0.4.1
@@ -36,6 +42,7 @@ jobs:
       - name: Build static markups for yeonjin.name
         run: |
           yarn build-static "yeonjin@yeonjin.name"
+          cp -r portfolio dist/portfolio
 
       - name: Deploy to yeonjin.name
         uses: bxb100/action-upload-webdav@v1

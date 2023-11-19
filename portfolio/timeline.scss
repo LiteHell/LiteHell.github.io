@@ -1,0 +1,57 @@
+
+ul.timeline {
+    --timeline-circle-size: 15px;
+    --timeline-border-width: 3px;
+
+    list-style: none;
+    margin: 1rem;
+    padding: 0px;
+    & > li {
+        display: flex;
+        flex-direction: row;
+        .date {
+            position: relative;
+            top: -5px;
+            display: inline-block;
+            font-size: 0.8em;
+            padding-right: 0.75rem;
+            color: #383838;
+            text-align: right;
+            width: 6em;
+            min-width: 6em;
+        }
+        .content {
+            position: relative;
+            display: inline-block;
+            border-left: var(--timeline-border-width) solid black;
+            &::before {
+                content: " ";
+                position: absolute;
+                left: -9px;
+                display: inline-block;
+                background-color: white;
+                width: var(--timeline-circle-size);
+                height: var(--timeline-circle-size);
+                border-radius: calc(var(--timeline-circle-size) / 2);
+                border: 3px solid black;
+                margin-right: 0.5rem;
+                box-sizing: border-box;
+            }
+            .inner {
+                position: relative;
+                left: 15px;
+                top: -7px;
+                display: inline-block;
+                p {
+                    margin: 0px;
+                    padding: 0px;
+                }
+            }
+        }
+        & + li {
+            .content, .date {
+                padding-top: 1rem;
+            }
+        }
+    }
+}
