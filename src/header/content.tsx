@@ -56,7 +56,7 @@ export default function Content(opts: HeaderContentOptions): ReactElement {
                     </a>
                 </li>)}
             </ul>
-            <div className="text-sm mt-3 text-gray-700">Scroll down to see more...</div>
+           {/* <div className="text-sm mt-3 text-gray-700">Scroll down to see more...</div> */}
         </div>
         <GPGDialog active={isGPGDialogActive} onCloseButtonClick={() => toggleGPGDialog(false)}></GPGDialog>
     </div>

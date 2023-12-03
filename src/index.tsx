@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { GitHub, Link, Linkedin } from "react-feather";
 import '../styles/index.css';
-import Content from './article';
-import Footer from "./footer";
+//import Content from './article';
+//import Footer from "./footer";
 import Header from "./header";
 import isBrowser from './isBrowser';
 
@@ -41,8 +41,8 @@ export default function Index({ email }: { email: string }) {
                 }
             ]}
         ></Header>
-        <Content></Content>
-        <Footer></Footer>
+        {/* <Content></Content>
+        <Footer></Footer> */}
     </div>
 }
 
