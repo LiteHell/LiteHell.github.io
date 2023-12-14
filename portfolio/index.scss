@@ -1,146 +1,159 @@
+@font-face {
+  font-family: "SUIT-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-    @page {
-        margin: 20mm 0mm 0mm 0mm;
-    }
-    
-    font-size: 16pt;
+  @page {
+    margin: 20mm 0mm 0mm 0mm;
+  }
 
+  font-size: 16pt;
+
+  .print-only {
+    display: none;
+  }
+  @media print {
     .print-only {
-        display: none;
+      display: inherit;
     }
-    @media print {
-        .print-only {
-            display: inherit;
-        }
-        .page-break {
-            break-before: page;
-            & + section > h3 {
-                padding-top: 10mm;
-            }
-        }
+    .page-break {
+      break-before: page;
+      & + section > h3 {
+        padding-top: 10mm;
+      }
+    }
+  }
+
+  * {
+    orphans: 1;
+  }
+
+  body {
+    font-family: "SUIT-Regular", sans-serif;
+    padding: 2.5rem 3.5rem;
+    @media screen and (max-width: 1000px) {
+      padding: 2.5rem 1.5rem;
+    }
+    @media screen and (min-width: 1001px) {
+      width: 900px;
+      margin: 0 auto;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 0px;
+      margin: 0px;
     }
 
-    * {
-        orphans: 1;
-    }
+    @import "header.scss";
 
-    body {
-        font-family: 'Noto Sans KR', sans-serif;
-        padding: 2.5rem 3.5rem;
-        @media screen and (max-width: 1000px) {
-            padding: 2.5rem 1.5rem;
+    article {
+      font-size: 12pt;
+      margin-top: 1rem;
+      @import "timeline.scss";
+      p.school-and-military-entry {
+        strong {
+          font-size: 14pt;
         }
-        @media screen and (min-width: 1001px) {
-            width: 900px;
-            margin: 0 auto;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            padding: 0px;
-            margin: 0px;
-        }
+      }
+      & > h3 {
+        font-size: 1.1rem;
+      }
+      section + section {
+        margin-top: 2rem;
+      }
 
-        @import 'header.scss';
-
-        article {
-            font-size: 12pt;
-            margin-top: 1rem;
-            @import 'timeline.scss';
-            p.school-and-military-entry {
-                strong {
-                    font-size: 14pt;
-                }
-            }
-            & > h3 {
-                font-size: 1.1rem;
-            }
-            section + section {
-                margin-top: 2rem;
-            }
-
-            ul.projects { 
-                /* @media print { */
-                    /* Not a good way... */
-                /*    li:nth-child(1) .project {
+      ul.projects {
+        /* @media print { */
+        /* Not a good way... */
+        /*    li:nth-child(1) .project {
                         padding-bottom: 20mm;
                     }
                     li:nth-child(3) .project {
                         padding-bottom: 100mm;
                     }
                 } */
-                .project {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 1rem;
-                    & > img.project-img {
-                        width: 12rem;
-                        height: auto;
-                    }
-                    & > .project-imgs {
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-direction: column;
-                        gap: 0.5rem;
-                        img {
-                            width: 12rem;
-                            height: auto;
-                            display: block;
-                        }
-                        @media print {
-                            &.single img {
-                                width: 24rem;
-                            }
-                        }
-                    }
-                    & > .project-description {
-                        h4 {
-                            font-size: 1.1em;
-                        }
-                        p {
-                            font-size: 12pt;
-                            margin: 0.25rem 0rem !important;
-                        }
-                        .project-links {
-                            list-style-type: none;
-                            display: block;
-                            padding: 0px;
-                            margin: 0px 0px 0.8rem 0px;
-                            font-size: 0.7em;
-                            li {
-                                display: inline-block;
-                                a {
-                                    text-decoration: none;
-                                    color: #383838;
-                                    &:hover {
-                                        color: black;
-                                    }
-                                }
-                                & + li {
-                                    margin-left: 0.25rem;
-                                }
-                            }
-                        }
-                    }
-                    @media screen and (max-width: 1000px) {
-                        flex-wrap: wrap;
-                        & > .project-imgs {
-                            flex-direction: row;
-                            flex-wrap: wrap;
-                            @media screen and (max-width: 640px) {
-                                .project-img {
-                                    width: 7rem;
-                                }
-                            }
-                        }
-                    }
-                    @media print {
-                        flex-direction: column;
-                        & > .project-imgs {
-                            flex-direction: row;
-                            flex-wrap: nowrap;
-                        }
-                    }
-                }
+        .project {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          & > img.project-img {
+            width: 12rem;
+            height: auto;
+          }
+          & > .project-imgs {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 0.5rem;
+            img {
+              width: 12rem;
+              height: auto;
+              display: block;
             }
+            @media print {
+              &.single img {
+                width: 24rem;
+              }
+            }
+          }
+          & > .project-description {
+            h4 {
+              font-size: 1.1em;
+            }
+            p {
+              font-size: 12pt;
+              margin: 0.25rem 0rem !important;
+            }
+            .project-links {
+              list-style-type: none;
+              display: block;
+              padding: 0px;
+              margin: 0px 0px 0.8rem 0px;
+              font-size: 0.7em;
+              li {
+                display: inline-block;
+                a {
+                  text-decoration: none;
+                  color: #383838;
+                  &:hover {
+                    color: black;
+                  }
+                }
+                & + li {
+                  margin-left: 0.25rem;
+                }
+              }
+            }
+          }
+          @media screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+            & > .project-imgs {
+              flex-direction: row;
+              flex-wrap: wrap;
+              @media screen and (max-width: 640px) {
+                .project-img {
+                  width: 7rem;
+                }
+              }
+            }
+          }
+          @media print {
+            flex-direction: column;
+            & > .project-imgs {
+              flex-direction: row;
+              flex-wrap: nowrap;
+            }
+          }
         }
+      }
     }
+  }
 }
