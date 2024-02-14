@@ -1,3 +1,14 @@
+@mixin mobile {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin date-style {
+    font-size: 0.8em;
+    color: #383838;
+}
+
 
 ul.timeline {
     --timeline-circle-size: 15px;
@@ -9,18 +20,30 @@ ul.timeline {
     & > li {
         display: flex;
         flex-direction: row;
-        .date {
+        & > .date {
+            @include date-style();
+            text-align: right;
+
             position: relative;
             top: -5px;
             display: inline-block;
-            font-size: 0.8em;
             padding-right: 0.75rem;
-            color: #383838;
-            text-align: right;
             width: 6em;
             min-width: 6em;
+            @include mobile {
+                display: none;
+            }
         }
         .content {
+            .date {
+                @include date-style();
+                display: none;
+                margin-top: 0.175rem;
+                margin-bottom: 0.75rem;
+                @include mobile {
+                    display: block;
+                }
+            }
             position: relative;
             display: inline-block;
             border-left: var(--timeline-border-width) solid black;
@@ -49,7 +72,7 @@ ul.timeline {
             }
         }
         & + li {
-            .content, .date {
+            .content, & > .date {
                 padding-top: 1rem;
             }
         }
