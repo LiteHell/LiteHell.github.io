@@ -88,21 +88,38 @@ html body article ul.timeline > li {
   display: flex;
   flex-direction: row;
 }
-html body article ul.timeline > li .date {
+html body article ul.timeline > li > .date {
+  font-size: 0.8em;
+  color: #383838;
+  text-align: right;
   position: relative;
   top: -5px;
   display: inline-block;
-  font-size: 0.8em;
   padding-right: 0.75rem;
-  color: #383838;
-  text-align: right;
   width: 6em;
   min-width: 6em;
+}
+@media screen and (max-width: 576px) {
+  html body article ul.timeline > li > .date {
+    display: none;
+  }
 }
 html body article ul.timeline > li .content {
   position: relative;
   display: inline-block;
   border-left: var(--timeline-border-width) solid black;
+}
+html body article ul.timeline > li .content .date {
+  font-size: 0.8em;
+  color: #383838;
+  display: none;
+  margin-top: 0.175rem;
+  margin-bottom: 0.75rem;
+}
+@media screen and (max-width: 576px) {
+  html body article ul.timeline > li .content .date {
+    display: block;
+  }
 }
 html body article ul.timeline > li .content::before {
   content: " ";
@@ -127,7 +144,7 @@ html body article ul.timeline > li .content .inner p {
   margin: 0px;
   padding: 0px;
 }
-html body article ul.timeline > li + li .content, html body article ul.timeline > li + li .date {
+html body article ul.timeline > li + li .content, html body article ul.timeline > li + li > .date {
   padding-top: 1rem;
 }
 html body article p.school-and-military-entry strong {
