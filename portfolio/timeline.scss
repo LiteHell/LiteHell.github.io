@@ -39,7 +39,7 @@ ul.timeline {
                 @include date-style();
                 display: none;
                 margin-top: 0.175rem;
-                margin-bottom: 0.75rem;
+                margin-bottom: 0.25rem;
                 @include mobile {
                     display: block;
                 }

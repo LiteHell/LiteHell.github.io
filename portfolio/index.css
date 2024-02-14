@@ -114,7 +114,7 @@ html body article ul.timeline > li .content .date {
   color: #383838;
   display: none;
   margin-top: 0.175rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 @media screen and (max-width: 576px) {
   html body article ul.timeline > li .content .date {
