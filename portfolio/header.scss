@@ -1,12 +1,15 @@
 header {
-    padding-left: 1rem;
     border-left: 0.2rem solid black;
+    padding: 0.5rem 0em 0.75rem 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #eeeeee;
     h1 {
         font-size: 2rem;
     }
     h2 {
         font-size: 1.125rem;
         font-weight: 500;
+        color: #383838;
     }
     .links {
         list-style-type: none;
