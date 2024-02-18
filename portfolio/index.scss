@@ -56,7 +56,10 @@ html {
             section + section {
                 margin-top: 2rem;
             }
-
+            .footnote {
+                vertical-align: super;
+                font-size: 0.75em;
+            }
             ul.projects { 
                 /* @media print { */
                     /* Not a good way... */
@@ -117,6 +120,15 @@ html {
                                 & + li {
                                     margin-left: 0.25rem;
                                 }
+                                & > del {
+                                    text-decoration: none;
+                                    &, & * {
+                                        color: #c7c7c7;
+                                    }
+                                    a {
+                                        text-decoration: line-through;
+                                    }
+                                }
                             }
                         }
                     }
@@ -139,6 +151,19 @@ html {
                             flex-wrap: nowrap;
                         }
                     }
+                }
+            }
+        }
+        footer {
+            margin-top: 2rem;
+            padding: 1rem 0rem;
+            border-top: 0.2em solid black;
+            font-size: 12pt;
+            .footnotes {
+                ol {
+                    list-style: none;
+                    margin: 0em 0em 1em 0em;
+                    padding: 0em;
                 }
             }
         }

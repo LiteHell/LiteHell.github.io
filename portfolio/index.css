@@ -156,6 +156,10 @@ html body article > h3 {
 html body article section + section {
   margin-top: 2rem;
 }
+html body article .footnote {
+  vertical-align: super;
+  font-size: 0.75em;
+}
 html body article ul.projects {
   /* @media print { */
   /* Not a good way... */
@@ -219,6 +223,15 @@ html body article ul.projects .project > .project-description .project-links li 
 html body article ul.projects .project > .project-description .project-links li + li {
   margin-left: 0.25rem;
 }
+html body article ul.projects .project > .project-description .project-links li > del {
+  text-decoration: none;
+}
+html body article ul.projects .project > .project-description .project-links li > del, html body article ul.projects .project > .project-description .project-links li > del * {
+  color: #c7c7c7;
+}
+html body article ul.projects .project > .project-description .project-links li > del a {
+  text-decoration: line-through;
+}
 @media screen and (max-width: 1000px) {
   html body article ul.projects .project {
     flex-wrap: wrap;
@@ -241,4 +254,15 @@ html body article ul.projects .project > .project-description .project-links li 
     flex-direction: row;
     flex-wrap: nowrap;
   }
+}
+html body footer {
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+  border-top: 0.2em solid black;
+  font-size: 12pt;
+}
+html body footer .footnotes ol {
+  list-style: none;
+  margin: 0em 0em 1em 0em;
+  padding: 0em;
 }
