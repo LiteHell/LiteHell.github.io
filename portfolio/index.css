@@ -168,6 +168,9 @@ html body article > h3 {
 html body article section + section {
   margin-top: 2rem;
 }
+html body article section.page-break {
+  padding-top: 2rem;
+}
 html body article .footnote {
   vertical-align: super;
   font-size: 0.75em;

@@ -64,6 +64,9 @@ html {
             section + section {
                 margin-top: 2rem;
             }
+            section.page-break {
+                padding-top: 2rem;
+            }
             .footnote {
                 vertical-align: super;
                 font-size: 0.75em;
