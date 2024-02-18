@@ -117,6 +117,15 @@ html {
                                 & + li {
                                     margin-left: 0.25rem;
                                 }
+                                & > del {
+                                    text-decoration: none;
+                                    &, & * {
+                                        color: #c7c7c7;
+                                    }
+                                    a {
+                                        text-decoration: line-through;
+                                    }
+                                }
                             }
                         }
                     }
