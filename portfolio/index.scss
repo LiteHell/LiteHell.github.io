@@ -26,6 +26,15 @@ html {
                 padding-top: 10mm;
             }
         }
+        .toggle-minor {
+            display: none;
+        }
+    }
+
+    &.minor-projects-hidden {
+        .projects .minor {
+            display: none;
+        }
     }
 
     * {

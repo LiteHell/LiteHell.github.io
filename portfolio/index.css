@@ -25,6 +25,12 @@ html .print-only {
   html .page-break + section > h2 {
     padding-top: 10mm;
   }
+  html .toggle-minor {
+    display: none;
+  }
+}
+html.minor-projects-hidden .projects .minor {
+  display: none;
 }
 html * {
   orphans: 1;
