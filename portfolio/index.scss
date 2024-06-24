@@ -17,6 +17,9 @@ html {
         display: none;
     }
     @media print {
+        .print-hidden {
+            display: none;
+        }
         .print-only {
             display: inherit;
         }

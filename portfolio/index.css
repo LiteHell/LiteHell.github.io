@@ -16,6 +16,9 @@ html .print-only {
   display: none;
 }
 @media print {
+  html .print-hidden {
+    display: none;
+  }
   html .print-only {
     display: inherit;
   }
