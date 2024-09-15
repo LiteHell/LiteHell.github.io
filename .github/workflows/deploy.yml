@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: 18
 
+      - uses: pnpm/action-setup@v4
+
       - name: Install and Build 🔧
         run: |
           pnpm install
@@ -36,7 +38,7 @@ jobs:
 
       - name: Build static markups for yeonjin.name
         run: |
-          yarn build-static "yeonjin@yeonjin.name"
+          pnpm build-static "yeonjin@yeonjin.name"
           cp -r static/* dist
 
       - name: Deploy to yeonjin.name
