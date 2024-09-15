@@ -26,9 +26,17 @@ header {
                     color: black;
                 }
             }
-             & + li {
+            & + li {
                 margin-left: 0.25rem;
-             }
+            }
+            .icon {
+                display: inline-block;
+                
+                * {
+                    height: 1em;
+                    width: auto;
+                }
+            }
         }
     }
 }

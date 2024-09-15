@@ -1,0 +1,16 @@
+export { default as algogatherImg } from './algogather.png';
+export { default as algogatherImg2 } from './algogather2.png';
+export { default as bidrumImg } from './bidrum.png';
+export { default as bidrumImg2 } from './bidrum2.png';
+export { default as bumaImg } from './buma.png';
+export { default as cauPreTimetableImg } from './cau-pre-timetable.png';
+export { default as cauRssImg } from './cau-rss.png';
+export { default as cauCalendarImg } from './caucalendar.png';
+export { default as caumdIdImg } from './caumd_id.png';
+export { default as caumdImg } from './caumd.png';
+export { default as caumdImg2 } from './caumd2.png';
+export { default as goinmulTestImg } from './goinmultest.png';
+export { default as goinmulTestImg2 } from './goinmultest2.png';
+export { default as namufixImg } from './namufix.png';
+export { default as sketchDailyImg } from './sketchdaily-1.png';
+export { default as sketchDailyImg2 } from './sketchdaily-2.png';

@@ -2,7 +2,6 @@ const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 const dev = process.env.NODE_ENV === 'development';
@@ -31,10 +30,14 @@ const commons = {
                 // Used only for node target environment
                 test: /\.node$/,
                 use: 'node-loader'
+            },
+            {
+                test: /\.png$/,
+                use: [ 'file-loader' ]
             }
         ]
     },
-    plugins: [new CleanWebpackPlugin(), new CopyPlugin({
+    plugins: [new CopyPlugin({
         patterns: ["static"]
     })]
 };
@@ -87,6 +90,56 @@ module.exports = [{
     }
 }, {
     ...commons,
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      },
+      minimize: !dev,
+      minimizer: [
+        '...',
+        new CssMinimizerPlugin()
+      ]
+    },
+    entry: './src/portfolio/index.tsx',
+    output: {
+        path: path.resolve(__dirname, 'dist/portfolio'),
+        filename: '[name].js'
+    },
+    module: {
+        ...commons.module,
+        rules: [
+            ...commons.module.rules,
+            {
+                test: /\.css$/,
+                use: [dev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+            },
+            {
+                test: /\.s[ac]ss$/,
+                use: [dev ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
+            }
+        ]
+    },
+    plugins: [
+        ...commons.plugins,
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({
+        title: 'Yeonjin Shin',
+        filename: 'index.html',
+        template: './src/portfolio/index.html'
+    })],
+    devServer: {
+        static: {directory: path.join(__dirname, 'dist')},
+        open: true,
+        port: 'auto',
+        client: {
+            progress: true
+        }
+    },
+    watchOptions: {
+        ignored: /node_modules/
+    }
+}, {
+    ...commons,
     target: 'node',
     entry: './src/generate.tsx',
     module: {
@@ -97,6 +150,10 @@ module.exports = [{
                 test: /\.css$/,
                 use: ['empty-loader']
             },
+            {
+                test: /\.s[ac]ss$/,
+                use: ['empty-loader']
+            }
         ]
     },
     output: {

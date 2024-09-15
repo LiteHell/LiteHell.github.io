@@ -1,16 +1,15 @@
 import { load as loadHTML } from 'cheerio';
 import { createWriteStream, promises as fs } from 'fs';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import server from 'react-dom/server';
 import tmp from 'tmp-promise';
 import Index from './index';
+import Portfolio from './portfolio/portfolio';
 
-(async () => {
+const render = async (filename: string, node: ReactNode) => {
     const tmpFile = await tmp.file();
-    const filename = './dist/index.html';
-    const email = process.argv[2];
 
-    const reactStream = server.renderToPipeableStream(<Index email={email} />);
+    const reactStream = server.renderToPipeableStream(node);
     const fileStream = createWriteStream(tmpFile.path);
     reactStream.pipe(fileStream).on('finish', async () => {
         const htmlText = await fs.readFile(filename, { encoding: 'utf8' });
@@ -21,4 +20,10 @@ import Index from './index';
         await fs.writeFile(filename, dom.html());
         console.log('Done!');
     });
+};
+
+(async () => {
+    const email = process.argv[2];
+    await render('./dist/index.html', <Index email={email} />);
+    await render('./dist/portfolio/index.html', <Portfolio />);
 })();
