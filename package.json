@@ -9,6 +9,7 @@
     "build-static": "node ./dist-builder",
     "dev": "webpack serve"
   },
+  "packageManager": "pnpm@9.10.0",
   "devDependencies": {
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
