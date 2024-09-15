@@ -6,12 +6,10 @@ import React from 'react';
 import classNames from 'classnames';
 
 type TimelineProp = {
-    projectTimeline?: boolean;
-    children: ReactNode;
+  projectTimeline?: boolean;
+  children: ReactNode;
 };
 
-export default function Timeline({ children, projectTimeline = false } : TimelineProp) {
-    return <ul className={classNames(styles.timeline, projectTimeline && projectStyles.projects)}>
-        { children }
-    </ul>
+export default function Timeline({ children, projectTimeline = false }: TimelineProp) {
+  return <ul className={classNames(styles.timeline, projectTimeline && projectStyles.projects)}>{children}</ul>;
 }

@@ -1,18 +1,18 @@
 .printOnly {
-    display: none;
+  display: none;
 }
 @media print {
-    .printHidden {
-        display: none;
+  .printHidden {
+    display: none;
+  }
+  .printOnly {
+    display: inherit;
+  }
+  .pageBreak {
+    padding-top: 2rem;
+    break-before: page;
+    & + section > h2 {
+      padding-top: 10mm;
     }
-    .printOnly {
-        display: inherit;
-    }
-    .pageBreak {
-        padding-top: 2rem;
-        break-before: page;
-        & + section > h2 {
-            padding-top: 10mm;
-        }
-    }
+  }
 }

@@ -1,83 +1,83 @@
 @mixin mobile {
-    @media screen and (max-width: 576px) {
-        @content;
-    }
+  @media screen and (max-width: 576px) {
+    @content;
+  }
 }
 
 @mixin date-style {
-    font-size: 0.8em;
-    color: #383838;
+  font-size: 0.8em;
+  color: #383838;
 }
 
-
 ul.timeline {
-    --timeline-circle-size: 15px;
-    --timeline-border-width: 3px;
+  --timeline-circle-size: 15px;
+  --timeline-border-width: 3px;
 
-    list-style: none;
-    margin: 1rem;
-    padding: 0px 0px 1.5rem 0px;
-    & > li {
-        display: flex;
-        flex-direction: row;
-        & > .date {
-            @include date-style();
-            text-align: right;
+  list-style: none;
+  margin: 1rem;
+  padding: 0px 0px 1.5rem 0px;
+  & > li {
+    display: flex;
+    flex-direction: row;
+    & > .date {
+      @include date-style();
+      text-align: right;
 
-            position: relative;
-            top: -2px;
-            display: inline-block;
-            font-size: 0.8em;
-            padding-right: 0.75rem;
-            text-align: right;
-            width: 6em;
-            min-width: 6em;
-            @include mobile {
-                display: none;
-            }
-        }
-        .content {
-            .date {
-                @include date-style();
-                display: none;
-                margin-top: 0.175rem;
-                margin-bottom: 0.25rem;
-                @include mobile {
-                    display: block;
-                }
-            }
-            position: relative;
-            display: inline-block;
-            border-left: var(--timeline-border-width) solid #b9b9b9;
-            &::before {
-                content: " ";
-                position: absolute;
-                left: -9px;
-                display: inline-block;
-                background-color: white;
-                width: var(--timeline-circle-size);
-                height: var(--timeline-circle-size);
-                border-radius: calc(var(--timeline-circle-size) / 2);
-                border: 3px solid #4e88df;
-                margin-right: 0.5rem;
-                box-sizing: border-box;
-            }
-            .inner {
-                position: relative;
-                left: 30px;
-                top: -5px;
-                display: inline-block;
-                p {
-                    margin: 0px;
-                    padding: 0px;
-                    line-height: 1.5;
-                }
-            }
-        }
-        & + li {
-            .content, & > .date {
-                padding-top: 1rem;
-            }
-        }
+      position: relative;
+      top: -2px;
+      display: inline-block;
+      font-size: 0.8em;
+      padding-right: 0.75rem;
+      text-align: right;
+      width: 6em;
+      min-width: 6em;
+      @include mobile {
+        display: none;
+      }
     }
+    .content {
+      .date {
+        @include date-style();
+        display: none;
+        margin-top: 0.175rem;
+        margin-bottom: 0.25rem;
+        @include mobile {
+          display: block;
+        }
+      }
+      position: relative;
+      display: inline-block;
+      border-left: var(--timeline-border-width) solid #b9b9b9;
+      &::before {
+        content: ' ';
+        position: absolute;
+        left: -9px;
+        display: inline-block;
+        background-color: white;
+        width: var(--timeline-circle-size);
+        height: var(--timeline-circle-size);
+        border-radius: calc(var(--timeline-circle-size) / 2);
+        border: 3px solid #4e88df;
+        margin-right: 0.5rem;
+        box-sizing: border-box;
+      }
+      .inner {
+        position: relative;
+        left: 30px;
+        top: -5px;
+        display: inline-block;
+        p {
+          margin: 0px;
+          padding: 0px;
+          line-height: 1.5;
+        }
+      }
+    }
+    & + li {
+      .content,
+      & > .date {
+        padding-top: 1rem;
+      }
+    }
+  }
 }
