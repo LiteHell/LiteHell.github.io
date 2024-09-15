@@ -1,14 +1,14 @@
-import React from 'react';
-import Header from './header';
-import { GitHub, Home, Mail } from 'react-feather';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
-import { pageBreak, printOnly } from './utils/printUtilClass';
-import styles from './portfolio.module.scss';
-import './global.scss';
-import Timeline from './timeline/timeline';
-import CVTimelineItem from './timeline/cvTimelineItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { GitHub, Home, Mail } from 'react-feather';
 import Projects from './content/projects';
+import './global.scss';
+import Header from './header';
+import styles from './portfolio.module.scss';
+import CVTimelineItem from './timeline/cvTimelineItem';
+import Timeline from './timeline/timeline';
+import { pageBreak, printOnly } from './utils/printUtilClass';
 
 export default function Portfolio() {
   return (
@@ -18,7 +18,7 @@ export default function Portfolio() {
         subtitle="Software Engineer"
         links={[
           { icon: <GitHub />, href: 'https://github.com/litehell' },
-          { icon: <Mail />, href: 'mailto:yeonjin@yeonjin.name' },
+          { icon: <Mail />, href: 'mailto:yeonjin@yeonjin.name', text: 'yeonjin@yeonjin.name' },
           { icon: <FontAwesomeIcon icon={faBlog} />, href: 'https://blog.litehell.info' },
           { icon: <Home />, href: 'https://yeonjin.name' },
         ]}

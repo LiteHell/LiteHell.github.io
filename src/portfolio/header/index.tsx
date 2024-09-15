@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import styles from './header.module.scss';
-import React from 'react';
 
 type HeaderProp = {
   title: string;
@@ -8,6 +7,7 @@ type HeaderProp = {
   links: {
     icon: ReactNode;
     href: string;
+    text?: string;
   }[];
 };
 
@@ -21,7 +21,7 @@ export default function Header(props: HeaderProp) {
           <li key={idx}>
             <div className={styles.icon}>{i.icon}</div>
             &nbsp;
-            <a href={i.href}>{i.href}</a>
+            <a href={i.href}>{i.text ?? i.href}</a>
           </li>
         ))}
       </ul>
