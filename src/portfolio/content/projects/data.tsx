@@ -1,7 +1,9 @@
-import { ReactNode } from 'react';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { ReactNode } from 'react';
 import { ProjectTimelineItemProp } from '../../timeline/projectTimelineItem';
 import { TimelineItemProp } from '../../timeline/timelineItem';
-import React from 'react';
 import { printHidden } from '../../utils/printUtilClass';
 import {
   algogatherImg,
@@ -17,12 +19,10 @@ import {
   goinmulTestImg,
   goinmulTestImg2,
   namufixImg,
+  namufixImg2,
   sketchDailyImg,
   sketchDailyImg2,
 } from './assets';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 type ProjectData = Pick<TimelineItemProp, 'startedAt' | 'endedAt' | 'inProgress'> &
   Pick<ProjectTimelineItemProp, 'title' | 'links' | 'images'> & {
@@ -289,7 +289,7 @@ const projectData: ProjectData[] = [
     title: 'NamuFix',
     startedAt: new Date(2015, 12, 1),
     endedAt: new Date(2019, 6, 1),
-    images: [namufixImg],
+    images: [namufixImg, namufixImg2],
     links: [
       {
         icon: <FontAwesomeIcon icon={faGithub} />,
