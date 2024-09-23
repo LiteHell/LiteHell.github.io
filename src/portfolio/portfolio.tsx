@@ -26,9 +26,18 @@ export default function Portfolio() {
       <section>
         <h2>자기소개</h2>
         <p>
-          안녕하세요! 소프트웨어 개발을 좋아하고, 평소 리눅스를 이용하는 신연진입니다.
-          <br />
-          웹, 게임, 응용 소프트웨어 등 다양한 영역에서의 개발을 즐깁니다.
+          안녕하세요! 소프트웨어 개발을 좋아하는 신연진입니다. 아주 어렸을 때 개발자가 되고 싶어 C와 Visual Basic 6.0을
+          처음으로 잠깐 배웠다가, C#와 VB.NET을 귓동냥으로 배우고, 그러다가 Javascript와 TypeScript를 접하게 되어
+          지금까지 웹 개발을 하게 됐습니다.
+        </p>
+        <p>
+          2015년 GitHub에 공개한 NamuFix 프로젝트를 시작으로, 지금까지 수많은 코드를 작성했습니다. 시행착오를 통해
+          성장하기 위해 많은 코드를 작성해왔지만, 동시에 시야를 넓히기 위해 대학교 수업도 소홀히 듣지 않았습니다.
+        </p>
+        <p>
+          비록 경험이나 프로젝트가 웹에 치중한 경향이 있지만, 되도록이면 게임, 시스템, 응용 소프트웨어 등 다양한
+          영역에서의 경험을 쌓으려 합니다. 그러한 다양한 분야에서의 경험을 바탕으로, 여러 문제를 해결할 수 있는 개발자가
+          되는 것, 그리고 원하는 것을 만들 수 있는 개발자가 되는 것이 목표입니다.
         </p>
         <p className={printOnly}>
           지금 보고 계신 이 포토폴리오는 <a href="https://yeonjin.name/portfolio">https://yeonjin.name/portfolio</a>
@@ -59,7 +68,7 @@ export default function Portfolio() {
           </CVTimelineItem>
         </Timeline>
       </section>
-      <section>
+      <section className={pageBreak}>
         <h2>학력</h2>
         <Timeline>
           <CVTimelineItem
@@ -85,7 +94,7 @@ export default function Portfolio() {
           </CVTimelineItem>
         </Timeline>
       </section>
-      <section className={pageBreak}>
+      <section>
         <h2>특허 출원</h2>
         <Timeline>
           <CVTimelineItem

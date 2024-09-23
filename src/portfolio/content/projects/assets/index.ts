@@ -9,6 +9,7 @@ export { default as cauCalendarImg } from './caucalendar.png';
 export { default as caumdImg } from './caumd.png';
 export { default as caumdImg2 } from './caumd2.png';
 export { default as caumdIdImg } from './caumd_id.png';
+export { default as caumdIdImg2 } from './caumd_id2.png';
 export { default as goinmulTestImg } from './goinmultest.png';
 export { default as goinmulTestImg2 } from './goinmultest2.png';
 export { default as namufixImg } from './namufix.png';

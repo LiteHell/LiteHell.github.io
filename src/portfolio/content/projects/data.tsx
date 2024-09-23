@@ -12,6 +12,7 @@ import {
   bidrumImg2,
   cauCalendarImg,
   caumdIdImg,
+  caumdIdImg2,
   caumdImg,
   caumdImg2,
   cauPreTimetableImg,
@@ -48,7 +49,7 @@ const projectData: ProjectData[] = [
         개발됐습니다.
         <br />
         <ul>
-          <li>X Window System이 설치된 경량화된 Linux를 이용한 임베디드 시스템을 제작했습니다.</li>
+          <li>X Window System와 Arch Linux를 이용해 경량화된 Linux 임베디드 시스템을 제작했습니다.</li>
           <li>시리얼 통신을 이용해 실제 장구를 이용한 하드웨어 컨트롤러 및 동전인식기/지폐인식기와 연동했습니다.</li>
           <li>FFMpeg 라이브러리를 이용한 비디오 디코딩을 구현했습니다.</li>
           <li>
@@ -80,8 +81,11 @@ const projectData: ProjectData[] = [
     ],
     description: (
       <>
-        고인물테스트는 <a href="http://www.shuru.co.kr/">주식회사 슈르</a>의 비영리 퀴즈 웹사이트로,&nbsp; Typescript를
-        이용하여 프론트엔드 개발에 참여했습니다.
+        고인물테스트는 <a href="http://www.shuru.co.kr/">주식회사 슈르</a>의 비영리 퀴즈 컨텐츠 웹사이트입니다.
+        <ul>
+          <li>TypeScript를 이용하여 정적 빌드되는 프론트엔드를 개발했습니다.</li>
+          <li>네이티브 어플리케이션에 근접한 UX를 위해 양방향 무한 스크롤링을 구현했습니다.</li>
+        </ul>
       </>
     ),
     important: true,
@@ -106,12 +110,6 @@ const projectData: ProjectData[] = [
       <>
         알고리즘 스터디를 더 편리하게 할 수 있도록 하기 위해 만들어진 프로젝트로, 저는 프론트엔드를 담당하였으며 React를
         이용했습니다.
-        <br />이 프로젝트는 다음과 같은 기능을 제공하며, 현재 개발중입니다.
-        <ul>
-          <li>스터디원의 과제풀이 여부 자동 확인</li>
-          <li>저장/불러오기/실행 기능이 있는 IDE</li>
-          <li>소스 코드의 공유 및 피드백 기능</li>
-        </ul>
       </>
     ),
     important: false,
@@ -186,19 +184,22 @@ const projectData: ProjectData[] = [
       <>
         중앙동아리 만화두레의 홍보를 위해 제작된 홈페이지입니다.
         <br />
-        React, TypeScript, Node.js, MariaDB를 이용했으며, 만화두레 회원관리 시스템의 관리자 아이디로 로그인하여
-        홈페이지를 수정할 수 있습니다.
+        <ul>
+          <li>React, TypeScript, Node.js, MariaDB를 이용해 백엔드와 프론트엔드를 작성했습니다.</li>
+          <li>OAuth 2.0 및 OpenID Connect 1.0 표준을 이용해 만화두레 회원관리 시스템과의 SSO 연동을 구현했습니다.</li>
+          <li>JWT을 이용하여 인증을 구현하고, RESTful API를 설계하여 백엔드와 프론트 간의 통신을 구현했습니다</li>
+        </ul>
         <br />
         2020년부터 2023년까지 운영됐으며, 2024년부터는 동아리 회장단의 결정에 따라 운영되지 않습니다.
       </>
     ),
-    important: false,
+    important: true,
   },
   {
     title: '만화두레 회원관리 시스템',
     startedAt: new Date(2020, 6, 1),
     endedAt: new Date(2020, 11, 1),
-    images: [caumdIdImg],
+    images: [caumdIdImg, caumdIdImg2],
     links: [
       {
         icon: <FontAwesomeIcon icon={faGithub} />,
@@ -218,18 +219,17 @@ const projectData: ProjectData[] = [
       <>
         중앙동아리 만화두레의 회원관리 및 입부원서 모집을 위해 제작된 홈페이지입니다.
         <br />
-        Vue, TypeScript, MariaDB, Node.js를 이용했으며 제공하는 기능은 다음과 같습니다.
         <ul>
-          <li>입부원서 접수 및 기록 보존</li>
-          <li>회원명부 관리 및 기록 보존</li>
-          <li>통합 인증 구현</li>
-          <li>권한 인수인계</li>
+          <li>Vue, TypeScript, MariaDB, Node.js을 이용해 백엔드와 프론트엔드를 작성했습니다.</li>
+          <li>GraphQL을 이용해 백엔드와 프론트엔드 간 통신을 구현했습니다.</li>
+          <li>OAuth 2.0와 OpenID Connect 1.0 표준을 부분적으로 구현하여 타 서비스와의 SSO 연동을 염두에 두었습니다</li>
+          <li>간단한 관리자 기능을 갖추고 있어 컴퓨터 관련 지식이 없는 동아리 임원도 쉽게 수정할 수 있습니다.</li>
         </ul>
         <br />
         2020년부터 2023년까지 운영됐으며, 2024년부터는 동아리 회장단의 결정에 따라 운영되지 않습니다.
       </>
     ),
-    important: false,
+    important: true,
   },
   {
     title: '중앙대학교 공지사항 RSS',
