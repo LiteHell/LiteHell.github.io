@@ -85,7 +85,7 @@ export default function Portfolio() {
         </Timeline>
       </section>
       <Projects></Projects>
-      <section>
+      <section className={pageBreak}>
         <h2>어학 및 자격증</h2>
         <Timeline>
           <CVTimelineItem startedAt={new Date(2024, 6, 1)} title="정보처리기사" inProgress={false} />
