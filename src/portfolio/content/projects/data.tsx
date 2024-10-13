@@ -188,6 +188,7 @@ const projectData: ProjectData[] = [
           <li>React, TypeScript, Node.js, MariaDB를 이용해 백엔드와 프론트엔드를 작성했습니다.</li>
           <li>OAuth 2.0 및 OpenID Connect 1.0 표준을 이용해 만화두레 회원관리 시스템과의 SSO 연동을 구현했습니다.</li>
           <li>JWT을 이용하여 인증을 구현하고, RESTful API를 설계하여 백엔드와 프론트 간의 통신을 구현했습니다</li>
+          <li>간단한 관리자 기능을 갖추고 있어 컴퓨터 관련 지식이 없는 동아리 임원도 쉽게 수정할 수 있습니다.</li>
         </ul>
         <br />
         2020년부터 2023년까지 운영됐으며, 2024년부터는 동아리 회장단의 결정에 따라 운영되지 않습니다.
@@ -223,7 +224,6 @@ const projectData: ProjectData[] = [
           <li>Vue, TypeScript, MariaDB, Node.js을 이용해 백엔드와 프론트엔드를 작성했습니다.</li>
           <li>GraphQL을 이용해 백엔드와 프론트엔드 간 통신을 구현했습니다.</li>
           <li>OAuth 2.0와 OpenID Connect 1.0 표준을 부분적으로 구현하여 타 서비스와의 SSO 연동을 염두에 두었습니다</li>
-          <li>간단한 관리자 기능을 갖추고 있어 컴퓨터 관련 지식이 없는 동아리 임원도 쉽게 수정할 수 있습니다.</li>
         </ul>
         <br />
         2020년부터 2023년까지 운영됐으며, 2024년부터는 동아리 회장단의 결정에 따라 운영되지 않습니다.
