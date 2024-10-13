@@ -59,7 +59,7 @@ export default function Portfolio() {
               </li>
             </ul>
           </CVTimelineItem>
-          <CVTimelineItem startedAt={new Date(2023, 12, 1)} endedAt={new Date(2024, 2, 1)} title="주식회사 슈르">
+          <CVTimelineItem startedAt={new Date(2023, 11, 1)} endedAt={new Date(2024, 2, 1)} title="주식회사 슈르">
             프론트엔드 인턴 개발자
             <ul>
               <li>2023년 12월 말부터 2024년 2월 말까지 근무했습니다.</li>
