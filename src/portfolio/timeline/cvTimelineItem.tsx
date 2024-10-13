@@ -1,6 +1,6 @@
-import TimelineItem, { TimelineItemProp } from './timelineItem';
-import styles from './cvTimelineItem.module.scss';
 import React from 'react';
+import styles from './cvTimelineItem.module.scss';
+import TimelineItem, { TimelineItemProp } from './timelineItem';
 
 type cvTimelineItemProp = TimelineItemProp & {
   title: string;
@@ -12,7 +12,7 @@ export default function CVTimelineItem({ children, noBreakAfterTitle = false, an
   return (
     <TimelineItem {...props}>
       <p>
-        {anchor && <span id={`#${anchor}`} />}
+        {anchor && <span id={anchor} />}
         <strong className={styles.cvTitle}>{props.title}</strong>
         {noBreakAfterTitle ? ' ' : <br />}
         {children}
