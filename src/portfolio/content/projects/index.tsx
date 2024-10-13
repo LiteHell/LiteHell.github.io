@@ -9,10 +9,6 @@ export default function Projects() {
   return (
     <section>
       <h2>프로젝트</h2>
-      <p>
-        특별한 언급이 없다면 제가 전부 다 만든 프로젝트입니다. 다만 몇몇 오픈 소스 프로젝트의 경우 다른 개발자분의
-        기여가 있습니다만 대부분의 코드는 제가 작성했습니다.
-      </p>
       <p className={printHidden}>
         <a
           href="#"
