@@ -118,7 +118,7 @@ export default function Portfolio() {
         <Timeline>
           <CVTimelineItem
             startedAt={new Date(2023, 1, 1)}
-            endedAt={new Date(2023, 12, 1)}
+            endedAt={new Date(2023, 11, 1)}
             title="동아리연합회 문화창작분과장"
           >
             경선에서 당선되고 다음과 같은 활동을 했습니다.
@@ -132,7 +132,7 @@ export default function Portfolio() {
           </CVTimelineItem>
           <CVTimelineItem
             startedAt={new Date(2023, 1, 1)}
-            endedAt={new Date(2023, 12, 1)}
+            endedAt={new Date(2023, 11, 1)}
             title="알고리즘 학회 ChAOS 부회장"
           >
             소프트웨어학부 알고리즘 학회 <a href="https://cauchaos.github.io">ChAOS</a>의 부회장직을 역임하며 다음과
@@ -143,7 +143,7 @@ export default function Portfolio() {
               <li>알고리즘 경진대회 스태프 참여</li>
             </ul>
           </CVTimelineItem>
-          <CVTimelineItem startedAt={new Date(2020, 1, 1)} endedAt={new Date(2020, 12, 1)} title="만화두레 부회장">
+          <CVTimelineItem startedAt={new Date(2020, 1, 1)} endedAt={new Date(2020, 11, 1)} title="만화두레 부회장">
             중앙동아리 만화두레의 부회장을 역임하며 다음과 같은 활동을 했습니다.
             <br />
             <ul>
