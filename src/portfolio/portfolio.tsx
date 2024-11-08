@@ -47,16 +47,15 @@ export default function Portfolio() {
       <section>
         <h2>경력 및 인턴십</h2>
         <Timeline>
-          <CVTimelineItem startedAt={new Date(2024, 6, 1)} title="주식회사 슈르" inProgress>
+          <CVTimelineItem startedAt={new Date(2024, 6, 1)} endedAt={new Date(2024, 10, 0)} title="주식회사 슈르">
             소프트웨어 개발자
             <ul>
+              <li>2024년 6월부터 11월까지 근무했습니다.</li>
               <li>
-                2024년 6월에 입사하여, React와 Firebase를 이용해 이커머스 플랫폼&nbsp;
-                <a href="https://shumaru.shop">슈마루</a>의 백오피스를 개발하고 있습니다.
+                React와 Firebase를 이용해 이커머스 플랫폼&nbsp;
+                <a href="https://shumaru.shop">슈마루</a>의 백오피스를 개발했습니다.
               </li>
-              <li>
-                Google Cloud Function이 이용된 백엔드와 Vue와 Firebase가 이용된 프론트엔드를 유지보수하고 있습니다.
-              </li>
+              <li>Google Cloud Function이 이용된 백엔드와 Vue와 Firebase가 이용된 프론트엔드를 유지보수했습니다.</li>
             </ul>
           </CVTimelineItem>
           <CVTimelineItem startedAt={new Date(2023, 11, 1)} endedAt={new Date(2024, 2, 1)} title="주식회사 슈르">
