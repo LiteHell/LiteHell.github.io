@@ -61,7 +61,7 @@ export default function Content(opts: HeaderContentOptions): ReactElement {
         </p>
         <ul className="mt-1.5">
           {opts.links.map(i => (
-            <li className="inline mr-2 last:mr-0" key={i.key}>
+            <li className="inline-block mr-2 last:mr-0" key={i.key}>
               <a className="hover:text-gray-700" href={i.href}>
                 {i.icon}&nbsp;{i.text}
               </a>
