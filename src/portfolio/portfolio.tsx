@@ -47,6 +47,12 @@ export default function Portfolio() {
       <section>
         <h2>경력 및 인턴십</h2>
         <Timeline>
+          <CVTimelineItem startedAt={new Date(2024, 10, 1)} inProgress title="쿠팡">
+            웹 프론트엔드 엔지니어
+            <ul>
+              <li>2024년 11월부터 웹 프론트엔드 엔지니어로 근무하고 있습니다.</li>
+            </ul>
+          </CVTimelineItem>
           <CVTimelineItem startedAt={new Date(2024, 6, 1)} endedAt={new Date(2024, 10, 0)} title="주식회사 슈르">
             소프트웨어 개발자
             <ul>
