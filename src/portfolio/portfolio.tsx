@@ -97,6 +97,12 @@ export default function Portfolio() {
           <CVTimelineItem startedAt={new Date(2023, 10, 1)} title="TOPCIT" inProgress={false} noBreakAfterTitle>
             수준4 (695점)
           </CVTimelineItem>
+          <CVTimelineItem startedAt={new Date(2023, 6, 1)} title="OPIc" inProgress={false} noBreakAfterTitle>
+            IH
+          </CVTimelineItem>
+          <CVTimelineItem startedAt={new Date(2020, 7, 1)} title="TOEIC" inProgress={false} noBreakAfterTitle>
+            810
+          </CVTimelineItem>
         </Timeline>
       </section>
       <section>
