@@ -44,7 +44,7 @@ jobs:
       - name: Deploy to yeonjin.name
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          repository-name: LiteHell/litehell-homepage-yeonjin.name
+          REPOSITORY_NAME: LiteHell/litehell-homepage-yeonjin.name
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           SSH: true
