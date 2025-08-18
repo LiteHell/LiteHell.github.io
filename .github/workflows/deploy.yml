@@ -1,14 +1,14 @@
 name: Build and Deploy
 on: [push]
 jobs:
-  build-and-deploy-litehell-info:
+  install-dependencies:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
         with:
           persist-credentials: false
-
+      
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -19,6 +19,28 @@ jobs:
         run: |
           pnpm install
           pnpm build
+
+      - uses: bissolli/gh-action-persist-workspace@v2
+        with:
+          action: persist
+
+
+  build-and-deploy-litehell-info:
+    needs: [install-dependencies]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: bissolli/gh-action-persist-workspace@v2
+        with:
+          action: retrieve
+
+      - name: Build 🔧
+        run: |
           pnpm build-static "litehell@litehell.info"
           cp -r static/* dist
           
@@ -38,24 +60,22 @@ jobs:
           CLEAN: true
 
   build-and-deploy-yeonjin-name:
+    needs: [install-dependencies]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-        with:
-          persist-credentials: false
-
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - uses: pnpm/action-setup@v4
 
-      - name: Install and Build 🔧
+      - uses: bissolli/gh-action-persist-workspace@v2
+        with:
+          action: retrieve
+
+      - name: Build 🔧
         run: |
-          pnpm install
-          pnpm build
-          pnpm build-static "yeonjin@yeonjin.name"
+          pnpm build-static "yeonjin.name"
           cp -r static/* dist
           
       - name: Install SSH Client 🔑
