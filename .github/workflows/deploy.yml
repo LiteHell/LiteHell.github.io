@@ -69,7 +69,7 @@ jobs:
         with:
           REPOSITORY_NAME: LiteHell/litehell-homepage-yeonjin.name
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: main
+          BRANCH: gh-pages
           SSH: true
           FOLDER: dist
           CLEAN: true
