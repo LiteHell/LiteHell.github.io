@@ -47,6 +47,6 @@ jobs:
           REPOSITORY_NAME: LiteHell/litehell-homepage-yeonjin.name
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: main
-          SSH: true
+          SSH_KEY: ${{ secrets.YEONJIN_NAME_DEPLOY_KEY }}
           FOLDER: dist
           CLEAN: true
