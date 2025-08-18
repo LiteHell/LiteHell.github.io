@@ -1,7 +1,7 @@
 name: Build and Deploy
 on: [push]
 jobs:
-  build-and-deploy:
+  build-and-deploy-litehell-info:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -27,7 +27,6 @@ jobs:
         with:
           ssh-private-key: |
             ${{ secrets.DEPLOY_KEY }}
-            ${{ secrets.YEONJIN_NAME_DEPLOY_KEY }}
 
       - name: Deploy to litehell.info 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
@@ -38,10 +37,32 @@ jobs:
           FOLDER: dist
           CLEAN: true
 
-      - name: Build static markups for yeonjin.name
+  build-and-deploy-yeonjin-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v4
+
+      - name: Install and Build 🔧
         run: |
+          pnpm install
+          pnpm build
           pnpm build-static "yeonjin@yeonjin.name"
           cp -r static/* dist
+          
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: |
+            ${{ secrets.YEONJIN_NAME_DEPLOY_KEY }}
 
       - name: Deploy to yeonjin.name
         uses: JamesIves/github-pages-deploy-action@3.7.1
