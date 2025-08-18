@@ -42,13 +42,11 @@ jobs:
           cp -r static/* dist
 
       - name: Deploy to yeonjin.name
-        uses: bxb100/action-upload@main
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          provider: webdav
-          flatten: false
-          provider_options: |
-            endpoint=${{ secrets.WEBDAV_ADDRESS }}
-            username=${{ secrets.WEBDAV_USERNAME }}
-            password=${{ secrets.WEBDAV_PASSWORD }}
-            root=/website
-          include: "./dist/**"
+          repository-name: LiteHell/litehell-homepage-yeonjin.name
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          SSH: true
+          FOLDER: dist
+          CLEAN: true
