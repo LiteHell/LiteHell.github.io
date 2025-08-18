@@ -29,15 +29,15 @@ jobs:
     needs: [install-dependencies]
     runs-on: ubuntu-latest
     steps:
+      - uses: bissolli/gh-action-persist-workspace@v2
+        with:
+          action: retrieve
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - uses: pnpm/action-setup@v4
-
-      - uses: bissolli/gh-action-persist-workspace@v2
-        with:
-          action: retrieve
 
       - name: Build 🔧
         run: |
@@ -63,15 +63,15 @@ jobs:
     needs: [install-dependencies]
     runs-on: ubuntu-latest
     steps:
+      - uses: bissolli/gh-action-persist-workspace@v2
+        with:
+          action: retrieve
+
       - uses: actions/setup-node@v3
         with:
           node-version: 18
 
       - uses: pnpm/action-setup@v4
-
-      - uses: bissolli/gh-action-persist-workspace@v2
-        with:
-          action: retrieve
 
       - name: Build 🔧
         run: |
